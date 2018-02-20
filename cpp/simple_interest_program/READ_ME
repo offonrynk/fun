@@ -1,0 +1,20 @@
+**********************************************************************************
+Author :      Nkrumah Offonry
+Date   :      16.09.2016
+**********************************************************************************
+
+Program for calculating Simple Interest
+
+* Where a Loan is taken out with an annual interest rate of 9%. 
+
+* Monthly payments of 165,25€ each. 
+
+* Program keeps track or remaining balance owed 
+
+Formula for balance is balk = ( PMT. (1 - (1+i)^(k-n)))/ i 
+
+balk =  balance remaining after the kth payment
+k    = payment number 
+PMT  = amount of monthly payment
+i    = interest rate per month 
+n    = total number of payments to be made
