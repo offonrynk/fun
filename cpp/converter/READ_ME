@@ -14,5 +14,5 @@ Progranm that can convert from:
 
 
  **** conversion.cpp is a program that implements this task all in the main file.
- **** converter folder is an implementation of the above task using classes and 
+ **** convert folder is an implementation of the above task using classes and 
       the concept of inheritance for better abstraction
