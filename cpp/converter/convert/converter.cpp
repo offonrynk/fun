@@ -12,29 +12,29 @@
  * Author: Nkrumah Offonry
  */
 
-#include <iostream>            
+#include <iostream>
 #include "converter.h"
 
 using namespace std;
 
-converter::converter(){}									  /* calling constructor */
+converter::converter(){}                    /* calling constructor */
 
-float converter::fahrenheit_to_celsius(float fahrenheit){                                         /* fahrenheit to celsius*/
-	celsius = ((fahrenheit - 32) * 5) / 9;
-	cout<< "The temperature in Fahrenheit is:"<<celsius<< endl;
+float converter::fahrenheit_to_celsius(float fahrenheit) {                                         /* fahrenheit to celsius*/
+  celsius = ((fahrenheit - 32) * 5) / 9;
+  cout<< "The temperature in Fahrenheit is:"<<celsius<< endl;
 }
 
-float converter::celsius_to_fahrenheit(float celsius){                                            /* celcius to fahrenheit */
-        fahrenheit = ((celsius * 9) / 5) + 32;
- 	cout<< "The temperature in Celsius is:"<<fahrenheit<< endl;      
+float converter::celsius_to_fahrenheit(float celsius) {                                            /* celcius to fahrenheit */
+  fahrenheit = ((celsius * 9) / 5) + 32;
+  cout<< "The temperature in Celsius is:"<<fahrenheit<< endl;
 }
 
-float converter::miles_to_kilometers(float miles){                                                /* miles to kilometers */
-        kilometers = (0.6214 * miles);
-	cout <<"The distance in kilometers is:"<<kilometers<< endl;
+float converter::miles_to_kilometers(float miles) {                                                /* miles to kilometers */
+  kilometers = (0.6214 * miles);
+  cout <<"The distance in kilometers is:"<<kilometers<< endl;
 }
 
-float converter::kilometers_to_miles(float kilometers){                                            /* kilometers to miles*/
-        miles = (1.609 * kilometers);
- 	cout <<"The distance in kilometers is:"<<miles<< endl;
+float converter::kilometers_to_miles(float kilometers) {                                            /* kilometers to miles*/
+  miles = (1.609 * kilometers);
+  cout <<"The distance in kilometers is:"<<miles<< endl;
 }
