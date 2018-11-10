@@ -5,13 +5,11 @@ int main() {
     if ((i % 15) == 0) {
       printf("FizzBuzz\t\n");
     }
-
       else if ((i % 3) == 0) {
-      printf("Fizz\t");
+        printf("Fizz\t");
       }
-
       else if ((i % 5) == 0) {
-      printf("Buzz\t");
+        printf("Buzz\t");
       }
 
     else {
