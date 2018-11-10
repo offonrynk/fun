@@ -1,0 +1,7 @@
+# .gitignore
+
+*.so
+*.o
+*.pdf
+*.tar.gz
+build/
