@@ -9,7 +9,8 @@
 
 class converter {
 public:
-  converter(); // Constructor
+  converter();  // Constructor
+  ~converter(); // Destructor
 
   // Member functions (Methods)
   float fahrenheit_to_celsius(float fahrenheit);
