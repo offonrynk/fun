@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+
 class User {
 public:
   std::string getName() const;

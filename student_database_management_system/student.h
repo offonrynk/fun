@@ -11,7 +11,7 @@ public:
   void addMajor(const std::string &stdudyProgram);
   void addCourses(const std::string &course);
 
-  std::string getName() const ;
+  std::string getName() const;
   std::string getRegNum() const;
   std::string majorProgram() const;
   std::string getCourses() const;

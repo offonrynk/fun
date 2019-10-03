@@ -22,6 +22,8 @@ public:
 private:
   std::map<std::string, User *> usersMap;
   std::vector<FriendsPair *> friendsPairList;
-  FriendsPair *getFriendship(const std::string &friendAId, const std::string &friendBId);
-  void removeFriendship(const std::string &friendAId, const std::string &friendBId);
+  FriendsPair *getFriendship(const std::string &friendAId,
+                             const std::string &friendBId);
+  void removeFriendship(const std::string &friendAId,
+                        const std::string &friendBId);
 };
