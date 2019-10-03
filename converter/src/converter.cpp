@@ -7,14 +7,11 @@
 #include "converter.h"
 #include <iostream>
 
-converter::converter()
-{
-}
+// clang-format off
+converter::converter() {}
 
-converter::~converter()
-{
-}
-
+converter::~converter() {}
+// clang-format on
 
 float converter::fahrenheit_to_celsius(float fahrenheit)
 {

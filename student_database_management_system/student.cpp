@@ -5,13 +5,15 @@
 Student::Student(const std::string &studentName)
 {
   name = studentName;
-  int timeStamp = static_cast<int> (std::time(0));
+  int timeStamp = static_cast<int>(std::time(0));
   auto timeStampString = std::to_string(timeStamp);
   /* TODO: make regNum distinct and random */
   regNum = timeStampString;
 }
 
-Student::~Student() {}
+Student::~Student()
+{
+}
 
 void Student::addName(const std::string &studentName)
 {

@@ -10,10 +10,12 @@ class FriendsPair {
 
 public:
   //!< further optimization will be to use smart pointers (unique_ptr)
-  FriendsPair(User *freindA, User *freindB) {
+  FriendsPair(User *freindA, User *freindB)
+  {
     FreindA = freindA;
     FreindB = freindB;
   };
+  // clang-format off
   User *getFriendA() const { return FreindA; };
   User *getFriendB() const { return FreindB; };
   ~FriendsPair(){};

@@ -18,9 +18,10 @@
 
 float celsius, fahrenheit, kilometers, miles;
 
-int main() {
+int main()
+{
   char c;
-  int flag = 1; // flag initialized to 1
+  int flag = 1;
   converter converterobj;
 
   while (flag) {
@@ -62,8 +63,7 @@ int main() {
         break;
 
       default:
-        std::cout << "Error!!! \n"; // Outputs Error if wrong value or letter is
-                                 // given as input
+        std::cout << "Error!!! \n";
     }
 
     std::cout << "To end program press 0 \n";

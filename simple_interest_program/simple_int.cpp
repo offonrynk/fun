@@ -3,7 +3,7 @@
  *
  * This program calculates the balance after each month for a loan
  * 1. Loan with an interest rate of 9% per anum
- * 2. Monthly payments of 162,25¤ per month for 48 months
+ * 2. Monthly payments of 162,25ï¿½ per month for 48 months
  * 3. Program calculates and shows balance for the first 3 months
  *
  * Author: Nkrumah Offonry
@@ -17,7 +17,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
   float balk;         // balance remaining after kth payment
   float PMT = 165.25; // monthly amount paid
   int k;              // payment number

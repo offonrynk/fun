@@ -21,7 +21,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
   float balk;         // balance remaining after Kth payment
   float PMT = 165.25; // amount of monthly payment
   int n = 48;         // number of payments

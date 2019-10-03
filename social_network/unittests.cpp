@@ -2,16 +2,19 @@
 #include "user.h"
 #include <iostream>
 
-int main() {
-  std::cout << "  Simple Unit Tests " << "\n";
-  std::cout << "--------------------" << "\n";
+int main()
+{
+  std::cout << "  Simple Unit Tests "
+            << "\n";
+  std::cout << "--------------------"
+            << "\n";
 
   SocialNetwork network;
-  User *James   = new User("James");
-  User *Monica  = new User("Monica");
-  User *Klaus1  = new User("Klaus");
-  User *Klaus2  = new User("Klaus");
-  User *Muller  = new User("Muller Thomas");
+  User *James = new User("James");
+  User *Monica = new User("Monica");
+  User *Klaus1 = new User("Klaus");
+  User *Klaus2 = new User("Klaus");
+  User *Muller = new User("Muller Thomas");
   User *Vanessa = new User("Vanessa Merkel");
 
   James->setAge(22);
@@ -41,26 +44,34 @@ int main() {
   if (22 != James->getAge()) {
     std::cout << "Wrong Age for " << James->getName() << "\n";
     return -1;
-  } else {
-    std::cout << James->getName() << " is " << James->getAge() << " years old" << "\n";
+  }
+  else {
+    std::cout << James->getName() << " is " << James->getAge() << " years old"
+              << "\n";
   }
 
-  auto monicaHobbies   = Monica->getHobbies();
-  auto monicaFindHobby = std::find(monicaHobbies.begin(), monicaHobbies.end(), "shopping");
+  auto monicaHobbies = Monica->getHobbies();
+  auto monicaFindHobby =
+      std::find(monicaHobbies.begin(), monicaHobbies.end(), "shopping");
   if (monicaFindHobby == monicaHobbies.end()) {
     std::cout << "Hobby Not found for " << Monica->getName() << "\n";
     return -1;
-  } else {
-    std::cout << Monica->getName() << " likes shopping" << "\n";
+  }
+  else {
+    std::cout << Monica->getName() << " likes shopping"
+              << "\n";
   }
 
-  auto klausHobbies   = Klaus2->getHobbies();
-  auto klausFindHobby = std::find(klausHobbies.begin(), klausHobbies.end(), "sleeping");
+  auto klausHobbies = Klaus2->getHobbies();
+  auto klausFindHobby =
+      std::find(klausHobbies.begin(), klausHobbies.end(), "sleeping");
   if (klausFindHobby == klausHobbies.end()) {
     std::cout << "Hobby 'sleeping' Not found for " << Klaus2->getName() << "\n";
     return -1;
-  } else {
-    std::cout << Klaus2->getName() << " likes hobby" << "\n";
+  }
+  else {
+    std::cout << Klaus2->getName() << " likes hobby"
+              << "\n";
   }
 
   for (auto &rand : James->getFriends()) {

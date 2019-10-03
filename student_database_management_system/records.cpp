@@ -10,7 +10,7 @@ Records::~Records()
 {
 }
 
-void Records::addRecord(Student* student)
+void Records::addRecord(Student *student)
 {
   studentRecord.push_back(student);
 }
@@ -20,10 +20,10 @@ std::vector<Student *> Records::listRecords() const
   return studentRecord;
 }
 
-void Records::modifyRecords(Student* student)
+void Records::modifyRecords(Student *student)
 {
   auto l_record =
-    std::find(std::begin(studentRecord), std::end(studentRecord), student);
+      std::find(std::begin(studentRecord), std::end(studentRecord), student);
   /*TODO: Implement method to modify records */
 }
 
@@ -33,9 +33,9 @@ std::vector<Student *> searchRecords()
   return {};
 }
 
-void Records::deleteRecords(Student* student)
+void Records::deleteRecords(Student *student)
 {
-  auto l_record = 
-    std::find(std::begin(studentRecord), std::end(studentRecord), student);
+  auto l_record =
+      std::find(std::begin(studentRecord), std::end(studentRecord), student);
   studentRecord.erase(l_record);
 }
