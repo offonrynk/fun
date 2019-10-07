@@ -9,7 +9,7 @@ class FriendsPair {
   User *FreindB;
 
 public:
-  //!< further optimization will be to use smart pointers (unique_ptr)
+  //!< TODO: further optimization will be to use smart pointers (unique_ptr)
   FriendsPair(User *freindA, User *freindB)
   {
     FreindA = freindA;
