@@ -9,9 +9,7 @@ User::User(const std::string &name)
   Id = Name + timestampString;
 }
 
-User::~User()
-{
-}
+User::~User() {}
 
 std::string User::getName() const
 {

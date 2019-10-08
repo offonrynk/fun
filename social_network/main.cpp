@@ -1,6 +1,6 @@
 #include "social_network.h"
-#include "user.h"
 #include "unittests.h"
+#include "user.h"
 #include <iostream>
 
 int main()
