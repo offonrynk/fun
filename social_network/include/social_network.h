@@ -1,7 +1,7 @@
 #pragma once
 
-#include "user.h"
 #include "friendspair.h"
+#include "user.h"
 #include <map>
 #include <vector>
 class SocialNetwork {
