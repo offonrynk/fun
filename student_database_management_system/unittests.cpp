@@ -34,6 +34,7 @@ int main()
     std::cout << it->majorProgram() << std::endl;
     std::cout << it->getCourses() << '\n' << '\n';
   }
+  r.modifyRecords(James);
 
   r.deleteRecords(James);
   std::cout << "Check if the Record for James is Deleted " << '\n' << std::endl;
@@ -46,5 +47,6 @@ int main()
     std::cout << it->getCourses() << '\n' << '\n';
   }
 
+  r.modifyRecords(James);
   return 0;
 }
