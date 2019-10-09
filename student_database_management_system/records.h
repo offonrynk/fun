@@ -18,8 +18,6 @@ public:
 private:
   std::vector<Student *> studentRecord;
   std::string rr;
-  Student m_student();
-
 };
 
 #endif
