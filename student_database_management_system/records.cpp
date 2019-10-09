@@ -2,13 +2,9 @@
 #include "student.h"
 #include <algorithm>
 
-Records::Records()
-{
-}
+Records::Records() {}
 
-Records::~Records()
-{
-}
+Records::~Records() {}
 
 void Records::addRecord(Student *student)
 {
