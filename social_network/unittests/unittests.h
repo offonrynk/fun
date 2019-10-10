@@ -5,7 +5,6 @@
 #pragma once
 
 #include "social_network.h"
-#include "user.h"
 #include <iostream>
 #include <list>
 

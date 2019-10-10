@@ -2,13 +2,9 @@
 #include "student.h"
 #include <algorithm>
 
-Records::Records()
-{
-}
+Records::Records() {}
 
-Records::~Records()
-{
-}
+Records::~Records() {}
 
 void Records::addRecord(Student *student)
 {
@@ -19,7 +15,7 @@ std::vector<Student *> Records::listRecords() const
 {
   return studentRecord;
 }
-
+#include <iostream>
 void Records::modifyRecords(Student *student)
 {
   auto l_record =

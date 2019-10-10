@@ -1,6 +1,5 @@
 #pragma once
 
-#include "friendspair.h"
 #include "user.h"
 #include <map>
 #include <vector>

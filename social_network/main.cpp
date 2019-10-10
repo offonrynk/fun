@@ -49,5 +49,12 @@ int main()
     std::cout << "Unit Tests Failed" << std::endl;
   }
 
+  delete James;
+  delete Monica;
+  delete Klaus;
+  delete Jane;
+  delete Muller;
+  delete Vanessa;
+
   return 0;
 }
