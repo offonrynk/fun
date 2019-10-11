@@ -1,5 +1,4 @@
 #include "student.h"
-#include <iostream>
 #include <ctime>
 
 Student::Student(const std::string &studentName)
@@ -7,13 +6,11 @@ Student::Student(const std::string &studentName)
   name = studentName;
   int timeStamp = static_cast<int>(std::time(0));
   auto timeStampString = std::to_string(timeStamp);
-  /* TODO: make regNum distinct and random */
-  regNum = timeStampString;
+  /* TODO: randomize timeStampString/number */
+  regNum = studentName + timeStampString;
 }
 
-Student::~Student()
-{
-}
+Student::~Student() {}
 
 void Student::addName(const std::string &studentName)
 {
@@ -40,7 +37,7 @@ std::string Student::getRegNum() const
   return regNum;
 }
 
-std::string Student::majorProgram() const
+std::string Student::getMajorProgram() const
 {
   return major;
 }
