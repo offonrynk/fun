@@ -24,8 +24,11 @@ public:
                             const std::string &currCourses,
                             const std::string &newCourses);
 
+  std::vector<Student *> searchRecordsByName(const std::string &name);
+  std::vector<Student *> searchRecordsByCourse(const std::string &course);
+  std::vector<Student *> searchRecordsByMajor(const std::string &major);
+
   void deleteRecords(Student *student);
-  std::vector<Student *> searchRecords();
 
 private:
   std::vector<Student *> studentRecord;

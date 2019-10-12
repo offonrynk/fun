@@ -3,9 +3,13 @@
 #include <algorithm>
 #include <iostream>
 
-Records::Records() {}
+Records::Records()
+{
+}
 
-Records::~Records() {}
+Records::~Records()
+{
+}
 
 void Records::addRecord(Student *student)
 {
@@ -102,11 +106,49 @@ void Records::modifyStudentCourses(Student *student,
   }
 }
 
-std::vector<Student *> searchRecords()
+// clang-format off
+std::vector<Student *> Records::searchRecordsByCourse(const std::string &course)
 {
-  /* TODO: Implement search method*/
-  return {};
+  std::vector<Student *> l_student;
+  for (const auto &it : studentRecord) {
+    // get all courses and search for course given as input
+    const std::string l_courses     = it->getCourses();
+          std::string::size_type n  = l_courses.find(course);
+
+    if (n != std::string::npos)
+    {
+      // if course is found, add student(s) taking the course to local vector
+      // of Student*
+      l_student.push_back(it);
+    }
+  }
+  return l_student;
 }
+
+std::vector<Student *> Records::searchRecordsByName(const std::string &name)
+{
+  std::vector<Student *> l_student;
+  for (auto it : studentRecord) {
+    if (it->getName() == name)
+    {
+      l_student.push_back(it);
+    }
+  }
+  return l_student;
+}
+
+std::vector<Student *> Records::searchRecordsByMajor(const std::string &major)
+{
+  std::vector<Student *> l_student;
+  for (auto it : studentRecord) {
+    if (it->getMajorProgram() == major)
+    {
+      l_student.push_back(it);
+    }
+  }
+  return l_student;
+}
+// clang-format on
 
 void Records::deleteRecords(Student *student)
 {
