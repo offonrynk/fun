@@ -13,7 +13,7 @@ public:
 
   std::string getName() const;
   std::string getRegNum() const;
-  std::string majorProgram() const;
+  std::string getMajorProgram() const;
   std::string getCourses() const;
 
 private:
