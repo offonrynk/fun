@@ -1,2 +1,3 @@
-Repository for fun/leisure tasks / projects
+# Fun
 
+Repository for leisure tasks and projects
