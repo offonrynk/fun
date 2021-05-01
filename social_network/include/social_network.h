@@ -3,10 +3,11 @@
 #include "user.h"
 #include <map>
 #include <vector>
+
 class SocialNetwork {
 public:
-  SocialNetwork();
-  ~SocialNetwork();
+  SocialNetwork() = default;
+  ~SocialNetwork() = default;
 
   void addUser(User *user);
   void deleteUser(const std::string &id);

@@ -8,8 +8,8 @@ class Records {
 public:
   enum class EModifyCourses { ADD = 0, REPLACE, REMOVE };
 
-  Records();
-  ~Records();
+  Records() = default;
+  ~Records() = default;
 
   void addRecord(Student *student);
   std::vector<Student *> listRecords() const;

@@ -3,24 +3,18 @@
  * Class header for Converter
  * Author: Nkrumah Offonry
  */
-
 #ifndef _CONVERTER_H
 #define _CONVERTER_H
 
-class converter {
+class Converter {
 public:
-  converter();  // Constructor
-  ~converter(); // Destructor
+  Converter() = default;
+  ~Converter() = default;
 
-  // Member functions (Methods)
-  float fahrenheit_to_celsius(float fahrenheit);
-  float celsius_to_fahrenheit(float celsius);
-  float miles_to_kilometers(float mile);
-  float kilometers_to_miles(float km);
-
-private:
-  float celsius, fahrenheit;
-  float kilometers, miles;
+  float fahrenheit_to_celsius(float const fahrenheit);
+  float celsius_to_fahrenheit(float const celsius);
+  float miles_to_kilometers(float const mile);
+  float kilometers_to_miles(float const km);
 };
 
 #endif

@@ -11,6 +11,6 @@ Program that converts from:
 
 Performs conversion depending on input character and subsequent input value
 
-## Build and Test
+## Build and Run
 
 To execute:- cd src && ./run.sh

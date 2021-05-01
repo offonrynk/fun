@@ -9,10 +9,10 @@
 void l_print(std::vector<Student *> dataToPrint)
 {
   for (const auto &it : dataToPrint) {
-    std::cout << it->getName() << std::endl;
-    std::cout << it->getRegNum() << std::endl;
-    std::cout << it->getMajorProgram() << std::endl;
-    std::cout << it->getCourses() << '\n' << '\n';
+    std::cout << it->getName() << "\n";
+    std::cout << it->getRegNum() << "\n";
+    std::cout << it->getMajorProgram() << "\n";
+    std::cout << it->getCourses() << "\n\n";
   }
 }
 
@@ -21,19 +21,18 @@ void l_print(std::vector<Student *> dataToPrint)
  */
 void l_print(std::string &stringToSearchFor, std::vector<Student *> dataToPrint)
 {
-  std::cout << "Students associated with:- " << stringToSearchFor << std::endl;
+  std::cout << "Students associated with:- " << stringToSearchFor << "\n";
   for (const auto &it : dataToPrint) {
-    std::cout << it->getName() << std::endl;
+    std::cout << it->getName() << "\n";
   }
   std::cout << '\n';
 }
 
 int main()
 {
-  std::cout << "Basic Unit Tests " << std::endl;
-  std::cout << "---------------- " << std::endl;
+  std::cout << "Basic Unit Tests\n-----------------\n";
 
-  Records m_records;
+  Records records;
   std::unique_ptr<Student> James = std::make_unique<Student>("James John");
   std::unique_ptr<Student> Dave = std::make_unique<Student>("David Kidd");
   std::unique_ptr<Student> Tom = std::make_unique<Student>("Tom Heart");
@@ -42,26 +41,26 @@ int main()
 
   James->addMajor("Electrical Engineering");
   James->addCourses("Math101, Phy101, Chem101");
-  m_records.addRecord(James.get());
+  records.addRecord(James.get());
 
   Dave->addMajor("Physics");
   Dave->addCourses("Math101, Phy101, Chem101");
-  m_records.addRecord(Dave.get());
+  records.addRecord(Dave.get());
 
   Tom->addMajor("Economics");
   Tom->addCourses("Math101, Eco101, Bus101");
-  m_records.addRecord(Tom.get());
+  records.addRecord(Tom.get());
 
   Sandra->addMajor("Computer Science");
   Sandra->addCourses("CMS101, Math101, C101");
-  m_records.addRecord(Sandra.get());
+  records.addRecord(Sandra.get());
 
   Nessa->addMajor("Computer Science");
   Nessa->addCourses("Math101, C101, CMS101, C++001, Python, Ruby, Data101");
-  m_records.addRecord(Nessa.get());
+  records.addRecord(Nessa.get());
 
   //!< print records to visualize all students are added
-  l_print(m_records.listRecords());
+  l_print(records.listRecords());
 
   //!< test search methods
   // clang-format off
@@ -69,9 +68,9 @@ int main()
   std::string majorToSearchFor   = "Computer Science";
   std::string coursesToSearchFor = "C++001";
 
-  std::vector<Student *> nameVector   = m_records.searchRecordsByName(nameToSearchFor);
-  std::vector<Student *> majorVector  = m_records.searchRecordsByMajor(majorToSearchFor);
-  std::vector<Student *> courseVector = m_records.searchRecordsByCourse(coursesToSearchFor);
+  std::vector<Student *> nameVector   = records.searchRecordsByName(nameToSearchFor);
+  std::vector<Student *> majorVector  = records.searchRecordsByMajor(majorToSearchFor);
+  std::vector<Student *> courseVector = records.searchRecordsByCourse(coursesToSearchFor);
   // clang-format on
 
   l_print(nameToSearchFor, nameVector);
@@ -79,22 +78,22 @@ int main()
   l_print(coursesToSearchFor, courseVector);
 
   //!< test modify methods
-  m_records.modifyStudentName(James.get(), James->getName(), "Peter Pan");
-  m_records.modifyStudentMajor(James.get(), James->getMajorProgram(),
-                               "New Major");
-  m_records.modifyStudentCourses(James.get(), Records::EModifyCourses::ADD,
-                                 James->getCourses(), "Math200, BMS201");
-  m_records.modifyStudentCourses(Sandra.get(), Records::EModifyCourses::REPLACE,
-                                 "Math101", "Math500");
-  m_records.modifyStudentCourses(Nessa.get(), Records::EModifyCourses::REMOVE,
-                                 "C101", "");
-  std::cout << "Test if the Records Modified as Desired " << '\n' << std::endl;
-  l_print(m_records.listRecords());
+  records.modifyStudentName(James.get(), James->getName(), "Peter Pan");
+  records.modifyStudentMajor(James.get(), James->getMajorProgram(),
+                             "New Major");
+  records.modifyStudentCourses(James.get(), Records::EModifyCourses::ADD,
+                               James->getCourses(), "Math200, BMS201");
+  records.modifyStudentCourses(Sandra.get(), Records::EModifyCourses::REPLACE,
+                               "Math101", "Math500");
+  records.modifyStudentCourses(Nessa.get(), Records::EModifyCourses::REMOVE,
+                               "C101", "");
+  std::cout << "Test if the Records Modified as Desired\n";
+  l_print(records.listRecords());
 
   //!< test delete
-  m_records.deleteRecords(James.get());
-  std::cout << "Check if the Record for James is Deleted " << '\n' << std::endl;
-  l_print(m_records.listRecords());
+  records.deleteRecords(James.get());
+  std::cout << "Check if the Record for James is Deleted\n";
+  l_print(records.listRecords());
 
   return EXIT_SUCCESS;
 }

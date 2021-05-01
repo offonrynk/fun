@@ -1,18 +1,13 @@
 #include "social_network.h"
 
-// clang-format off
-SocialNetwork::SocialNetwork() {}
-
-SocialNetwork::~SocialNetwork() {}
-// clang-format on
-
 User *SocialNetwork::getUserById(const std::string &id) const
 {
-  if (usersMap.find(id) != usersMap.end()) {
-    return usersMap.find(id)->second;
+  if (usersMap.find(id) == usersMap.end()) {
+    std::cout << "The given user id does not exist" << std::endl;
+    return nullptr;
   }
-  std::cout << "The given user id does not exist" << std::endl;
-  return nullptr;
+
+  return usersMap.find(id)->second;
 }
 
 std::vector<User *> SocialNetwork::getUsers() const
@@ -27,14 +22,14 @@ std::vector<User *> SocialNetwork::getUsers() const
 FriendsPair *SocialNetwork::getFriendship(const std::string &friendAId,
                                           const std::string &friendBId)
 {
-  if (usersMap.find(friendAId) != usersMap.end() &&
-      usersMap.find(friendBId) != usersMap.end()) {
-    auto friendPairA = usersMap.find(friendAId)->second;
-    auto friendPairB = usersMap.find(friendBId)->second;
-    return (*friendPairA).getFriendPairRelationship(friendBId);
+  if (usersMap.find(friendAId) == usersMap.end() &&
+      usersMap.find(friendBId) == usersMap.end()) {
+    std::cout << "The given friendship does not exist" << std::endl;
+    return nullptr;
   }
-  std::cout << "The given friendship does not exist" << std::endl;
-  return nullptr;
+
+  auto friendPairA = usersMap.find(friendAId)->second;
+  return (*friendPairA).getFriendPairRelationship(friendBId);
 }
 
 void SocialNetwork::removeFriendship(const std::string &friendAId,
@@ -48,9 +43,6 @@ void SocialNetwork::removeFriendship(const std::string &friendAId,
 
     (*pair).getFriendA()->removeFriend(pair);
     (*pair).getFriendB()->removeFriend(pair);
-  }
-  else {
-    std::cout << "The given friendship does not exist" << std::endl;
   }
 }
 

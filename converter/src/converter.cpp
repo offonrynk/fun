@@ -1,38 +1,21 @@
-/* Copyright (c) 2016, Nkrumah Offonry
- * All rights reserved.
- * Cpp file for program header
- * Author: Nkrumah Offonry
- */
-
 #include "converter.h"
-#include <iostream>
 
-// clang-format off
-converter::converter() {}
-
-converter::~converter() {}
-// clang-format on
-
-float converter::fahrenheit_to_celsius(float fahrenheit)
+float Converter::fahrenheit_to_celsius(float const fahrenheit)
 {
-  celsius = ((fahrenheit - 32) * 5) / 9;
-  std::cout << "The temperature in Fahrenheit is: " << celsius << std::endl;
+  return ((fahrenheit - 32) * 5) / 9;
 }
 
-float converter::celsius_to_fahrenheit(float celsius)
+float Converter::celsius_to_fahrenheit(float const celsius)
 {
-  fahrenheit = ((celsius * 9) / 5) + 32;
-  std::cout << "The temperature in Celsius is: " << fahrenheit << std::endl;
+  return ((celsius * 9) / 5) + 32;
 }
 
-float converter::miles_to_kilometers(float miles)
+float Converter::miles_to_kilometers(float const miles)
 {
-  kilometers = (0.6214 * miles);
-  std::cout << "The distance in kilometers is: " << kilometers << std::endl;
+  return (0.6214 * miles);
 }
 
-float converter::kilometers_to_miles(float kilometers)
+float Converter::kilometers_to_miles(float const kilometers)
 {
-  miles = (1.609 * kilometers);
-  std::cout << "The distance in kilometers is: " << miles << std::endl;
+  return (1.609 * kilometers);
 }

@@ -6,7 +6,7 @@
 class Student {
 public:
   Student(const std::string &studentName);
-  ~Student();
+  ~Student() = default;
   void addName(const std::string &studentName);
   void addMajor(const std::string &stdudyProgram);
   void addCourses(const std::string &course);
@@ -22,5 +22,4 @@ private:
   std::string major;
   std::string courses;
 };
-
 #endif

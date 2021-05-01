@@ -12,17 +12,16 @@
  * Main file for the converter
  * Author: Nkrumah Offonry
  */
-
 #include "converter.h"
 #include <iostream>
-
-float celsius, fahrenheit, kilometers, miles;
 
 int main()
 {
   char c;
   int flag = 1;
-  converter converterobj;
+  float celsius{0.0f}, fahrenheit{0.0f}, kilometers{0.0f}, miles{0.0f};
+
+  Converter converter;
 
   while (flag) {
     std::cout << "'F' for Fahrenheit to Celsius Conversion\n";
@@ -37,29 +36,33 @@ int main()
       case 'C':
       case 'c':
         std::cout << "Please enter temperature in celsius: \n";
-        std::cin >> fahrenheit;
-        converterobj.celsius_to_fahrenheit(celsius);
+        std::cin >> celsius;
+        std::cout << "The temperature in Fahrenheit is: "
+                  << converter.celsius_to_fahrenheit(celsius) << std::endl;
         break;
 
       case 'F':
       case 'f':
         std::cout << "Please enter temperature in fahrenheit: \n";
         std::cin >> fahrenheit;
-        converterobj.fahrenheit_to_celsius(fahrenheit);
+        std::cout << "The temperature in Celsius is: "
+                  << converter.fahrenheit_to_celsius(fahrenheit) << std::endl;
         break;
 
       case 'M':
       case 'm':
         std::cout << "Please enter distance in miles: \n";
         std::cin >> miles;
-        converterobj.miles_to_kilometers(miles);
+        std::cout << "The distance in kilometers is: "
+                  << converter.miles_to_kilometers(miles) << std::endl;
         break;
 
       case 'K':
       case 'k':
         std::cout << "Please enter distance in kilometers: \n";
         std::cin >> kilometers;
-        converterobj.kilometers_to_miles(kilometers);
+        std::cout << "The distance in kilometers is: "
+                  << converter.kilometers_to_miles(kilometers) << std::endl;
         break;
 
       default:

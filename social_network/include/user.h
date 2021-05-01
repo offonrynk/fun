@@ -8,6 +8,9 @@
 
 class User {
 public:
+  User(const std::string &name);
+  ~User() = default;
+
   std::string getName() const;
   std::vector<std::string> getHobbies() const;
   std::string getId() const;
@@ -25,8 +28,6 @@ public:
   void setHeight(int height);
   void addFriendship(FriendsPair *friendAB);
   void removeFriendshipTo(const std::string &id);
-  User(const std::string &name);
-  ~User();
 
 private:
   std::string Name;

@@ -3,14 +3,6 @@
 #include <algorithm>
 #include <iostream>
 
-Records::Records()
-{
-}
-
-Records::~Records()
-{
-}
-
 void Records::addRecord(Student *student)
 {
   studentRecord.push_back(student);
